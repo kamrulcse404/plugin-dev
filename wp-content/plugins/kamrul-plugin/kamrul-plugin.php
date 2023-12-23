@@ -32,12 +32,15 @@ class KamrulPlugin
     function activate()
     {
         // generated cpt 
+        $this->custom_post_type();
         // flush rewrite rules 
+        flush_rewrite_rules();
     }
 
     function deactivate()
     {
         // flush rewrite rules 
+        flush_rewrite_rules();
     }
 
     function uninstall()
