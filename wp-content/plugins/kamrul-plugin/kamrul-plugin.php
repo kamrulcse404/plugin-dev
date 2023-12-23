@@ -68,3 +68,4 @@ register_activation_hook( __FILE__ , array($kamrulPlugin, 'activate') );
 register_deactivation_hook( __FILE__ , array($kamrulPlugin, 'deactivate') );
 
 // uninstall 
+register_uninstall_hook( __FILE__ , array($kamrulPlugin, 'uninstall') );
