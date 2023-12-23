@@ -24,6 +24,11 @@ defined('ABSPATH') or die('you can\t access this file, you silly human');
 
 class KamrulPlugin
 {
+    function __construct()
+    {
+        add_action( 'init', array($this, 'custom_post_type' ));
+    }
+
     function activate()
     {
         // generated cpt 
@@ -39,6 +44,11 @@ class KamrulPlugin
     {
         // delete cpt 
         // delete all data from the DB 
+    }
+
+    function custom_post_type()
+    {   
+        register_post_type( 'book', [ 'public' => true, 'label' => 'Books'] );
     }
 }
 
