@@ -33,6 +33,17 @@ if (!class_exists('KamrulPlugin')) {
         function register()
         {
             add_action('admin_enqueue_scripts', array($this, 'enqueue'));
+            add_action('admin_menu', array($this, 'add_admin_pages'));
+        }
+
+        public function add_admin_pages()
+        {
+            add_menu_page('Kamrul Plugin', 'Kamrul', 'manage_options', 'kamrul_plugin', array($this, 'admin_index'), 'dashicons-admin-site-alt3' , 110 );
+        }
+
+        public function admin_index()
+        {
+            // require template 
         }
 
 
