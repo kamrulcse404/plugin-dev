@@ -1,0 +1,20 @@
+{
+    "name": "user/kamrul-plugin",
+    "description": "Awesome plugin",
+    "type": "project",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Inc\\": "./inc"
+        }
+    },
+    "authors": [
+        {
+            "name": "kamrulcse404",
+            "email": "kamrul.h01960@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+    
+}

@@ -1,0 +1,19 @@
+{
+    "name": "user/plugin_dev",
+    "description": "Awesome plugin \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D starter plugin exaple",
+    "type": "project",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "User\\PluginDev\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kamrulcse404",
+            "email": "kamrul.h01960@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

@@ -22,7 +22,17 @@ Text Domain: kamrul-plugin
 
 defined('ABSPATH') or die('you can\t access this file, you silly human');
 
+if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
+    require_once dirname( __FILE__ ) . '/vendor/autoload.php';
+}
+
+use Inc\Activate;
+use Inc\Deactivate;
+
+
 if (!class_exists('KamrulPlugin')) {
+
+
     class KamrulPlugin
     {
 
@@ -82,14 +92,14 @@ if (!class_exists('KamrulPlugin')) {
 
         function activate()
         {
-            require_once plugin_dir_path(__FILE__) . 'inc/kamrul-plugin-activate.php';
-            KamrulPluginActivate::activate();
+            // require_once plugin_dir_path(__FILE__) . 'inc/kamrul-plugin-activate.php';
+            Activate::activate();
         }
 
         function deactivate()
         {
-            require_once plugin_dir_path(__FILE__) . 'inc/kamrul-plugin-deactivate.php';
-            KamrulPluginDeactivate::deactivate();
+            // require_once plugin_dir_path(__FILE__) . 'inc/kamrul-plugin-deactivate.php';
+            Deactivate::deactivate();
         }
     }
 
